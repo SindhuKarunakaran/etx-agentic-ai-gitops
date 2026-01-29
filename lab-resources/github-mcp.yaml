@@ -5,7 +5,7 @@ metadata:
   name: github-credentials-v1
 stringData:
   # Add your PAT here
-  token: <YOUR_GITHUB_PERSONAL_ACCESS_TOKEN>
+  token: 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
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -29,7 +29,7 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: GITHUB_PERSONAL_ACCESS_TOKEN
+        - name: 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
           valueFrom:
             secretKeyRef:
               name: github-credentials-v1
